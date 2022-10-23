@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/drawable/bg_button_firststart.xml" value="0.33" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/drawable/textfields.xml" value="0.1735" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v23/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_fifthpage.xml" value="0.2783318223028105" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_fourthpage.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_main.xml" value="0.2783318223028105" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_secondpage.xml" value="0.365625" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_sixthpage.xml" value="0.27807971014492755" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_thirdpage.xml" value="0.365625" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_fifthpage.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_fourthpage.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_login.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_main.xml" value="0.27445652173913043" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_secondpage.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_sixthpage.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_thirdpage.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/content_main.xml" value="0.27445652173913043" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

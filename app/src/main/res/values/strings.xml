@@ -11,7 +11,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="spiice_firststart">Spiice</string>
     <string name="discover_the_platform">Discover the platform</string>
-    <string name="login_firststart">You have an account ? Log-in</string>
     <string name="login_start">You have no account ? Log-in</string>
     <string name="spiice">Spiice</string>
     <string name="skip">Skip</string>
@@ -25,4 +24,19 @@
     <string name="return_to_sign_up">Return to Sign-up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="sign_up">Sign-up</string>
+    <string name="you_have_an_account">You have an account ? <b>Log-in</b></string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email_blank">Required field</string>
+    <string name="email_invalid">Invalid email</string>
+    <string name="password_blank">Required field</string>
+    <string name="firstName_blank">Required field</string>
+    <string name="lastName_blank">Required field</string>
+    <string name="passwordLessThan6">Password must be at least 6 characters</string>
+    <string name="passwordMoreThan50">Maximum number of characters exceeded</string>
+    <string name="passwordUpperCase">Must have at least 1 uppercase letter</string>
+    <string name="passwordLowerCase">Must have at least 1 lowercase letter</string>
+    <string name="passwordDigit">Must have at least 1 digit</string>
+    <string name="passwordCharacter">Must have at least 1 special character</string>
 </resources>

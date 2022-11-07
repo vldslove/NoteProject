@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_loginpage_background"
+        android:background="@drawable/ic_signupactivity_background"
         android:scaleType="centerCrop" />
 
     <LinearLayout
@@ -20,49 +20,85 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="32dp"
             android:fontFamily="@font/red_hat_display"
-            android:text="@string/login"
+            android:text="@string/sign_up"
             android:textColor="@color/textOnPageColor"
-            android:textSize="27sp"/>
+            android:textFontWeight="500"
+            android:textSize="27sp" />
+
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailField"
+            android:id="@+id/firstNameSignup"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:hint="@string/first_name"
+            android:textColorHint="@color/hintTextColor"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfields"
+                android:fontFamily="@font/public_sans_light" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastNameSignup"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:hint="@string/last_name"
+            android:textColorHint="@color/hintTextColor"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfields"
+                android:fontFamily="@font/public_sans_light" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailSignup"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
             android:hint="@string/email"
             android:textColorHint="@color/hintTextColor"
-            app:boxStrokeWidth="0dp"
-            android:layout_marginBottom="24dp">
+            app:boxStrokeWidth="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textfields"
-                android:fontFamily="@font/public_sans_light"/>
+                android:fontFamily="@font/public_sans_light" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordField"
+            android:id="@+id/passwordSignup"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="280dp"
             android:hint="@string/password"
             android:textColorHint="@color/hintTextColor"
-            app:boxStrokeWidth="0dp"
-            android:layout_marginBottom="472dp"
-            >
+            app:boxStrokeWidth="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textfields"
-                android:fontFamily="@font/public_sans_light"/>
+                android:fontFamily="@font/public_sans_light" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
 
     </LinearLayout>
 
@@ -73,27 +109,27 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/login_button"
+            android:id="@+id/signupButton"
             android:layout_width="263dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="41dp"
             android:background="@drawable/bg_button_firststart"
             android:fontFamily="@font/public_sans_bold"
-            android:text="@string/button_login"
-            android:textAllCaps="false"/>
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textFontWeight="500" />
 
         <TextView
-            android:id="@+id/to_signup"
+            android:id="@+id/loginFromSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/public_sans_light"
             android:layout_marginBottom="94dp"
-            android:text="@string/return_to_sign_up"
+            android:fontFamily="@font/public_sans_light"
+            android:text="@string/you_have_an_account"
             android:textColor="@color/textOnPageColor"
             android:textSize="@dimen/textOnPageSize" />
     </LinearLayout>
-
 
 </FrameLayout>

@@ -6,18 +6,19 @@ import android.os.Handler
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class SixthPage : AppCompatActivity() {
+class ProgressActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sixthpage)
         val skip = findViewById<TextView>(R.id.skip6)
         skip.setOnClickListener(){
-            val intent = Intent(this, LoginPage::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
-        Handler().postDelayed({
-            val intent = Intent(this, LoginPage::class.java)
-            startActivity(intent)
-        }, 10000)
+//        Handler().postDelayed({
+//            val intent = Intent(this, SignupActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, 2000)
     }
 }

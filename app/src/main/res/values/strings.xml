@@ -39,4 +39,11 @@
     <string name="passwordLowerCase">Must have at least 1 lowercase letter</string>
     <string name="passwordDigit">Must have at least 1 digit</string>
     <string name="passwordCharacter">Must have at least 1 special character</string>
+    <string name="addnote_back">Back</string>
+    <string name="addnote_title">Title</string>
+    <string name="addnote_message">Message</string>
+    <string name="add_note">Add note</string>
+    <string name="addnote_buttontext">Add</string>
+    <string name="logout_list">Logout</string>
+    <string name="add_new">Add new</string>
 </resources>

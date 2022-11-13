@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/ic_addnote_arrow" />
+
+        <TextView
+            android:id="@+id/back_to_note_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/red_hat_display"
+            android:text="@string/addnote_back"
+            android:textColor="@color/hintTextColor"
+            android:textFontWeight="500"
+            android:textSize="18sp"
+            tools:targetApi="p" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="39dp"
+            android:fontFamily="@font/red_hat_display"
+            android:text="@string/add_note"
+            android:textColor="@color/textOnPageColor"
+            android:textFontWeight="700"
+            android:textSize="25sp"
+            tools:targetApi="p" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/title"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="39dp"
+            android:hint="@string/addnote_title"
+            android:textColorHint="@color/hintTextColor"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/titleField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfields" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/message"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="120dp"
+            android:hint="@string/addnote_message"
+            android:textColorHint="@color/hintTextColor"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageField"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/textfields"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/add_note"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="134dp"
+            android:background="@drawable/bg_button_firststart"
+            android:text="@string/addnote_buttontext"
+            android:textAllCaps="false"
+            android:textFontWeight="500"
+            android:textSize="@dimen/buttonTextSize"
+            tools:targetApi="p" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

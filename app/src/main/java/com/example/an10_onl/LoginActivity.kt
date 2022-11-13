@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         findViewById<TextInputLayout>(R.id.passwordField)?.getStringText()
         findViewById<Button>(R.id.login_button).setOnClickListener() {
             if (validate()) {
-
+                startActivity(Intent(this, ListActivity::class.java))
             }
         }
 

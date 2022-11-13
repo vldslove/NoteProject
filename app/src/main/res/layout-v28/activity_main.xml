@@ -22,7 +22,7 @@
            android:layout_height="wrap_content"
            android:fontFamily="@font/red_hat_display"
            android:text="@string/spiice_firststart"
-           android:textColor="#120E21"
+           android:textColor="@color/textOnPageColor"
            android:textFontWeight="500"
            android:textSize="96sp"
            android:layout_marginBottom="257dp"
@@ -39,7 +39,7 @@
            android:text="@string/discover_the_platform"
            android:textAlignment="center"
            android:textAllCaps="false"
-           android:textColor="#FFFFFF"
+           android:textColor="@color/white"
            android:textScaleX="0.8"
            android:textSize="18sp"/>
 
@@ -48,8 +48,8 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:fontFamily="@font/public_sans_light"
-           android:text="@string/login_start"
-           android:textColor="#120E21"
+           android:text="@string/you_have_an_account"
+           android:textColor="@color/textOnPageColor"
            android:textFontWeight="600"
            android:textSize="18sp"
            android:layout_gravity="center"

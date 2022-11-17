@@ -19,7 +19,6 @@ class NoteListViewHolder(private val view: View) : RecyclerView.ViewHolder(view)
                 val chosenIntent = Intent.createChooser(intent, "qwe")
                 context.startActivity(chosenIntent)
             }
-
         }
 
     }

@@ -18,7 +18,7 @@ class SignupActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.signupButton).setOnClickListener() {
             if (validate()) {
-
+                startActivity(Intent(this, ListActivity::class.java))
             }
         }
 

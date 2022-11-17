@@ -24,7 +24,7 @@
             android:fontFamily="@font/red_hat_display"
             android:text="@string/login"
             android:textColor="@color/textOnPageColor"
-            android:textSize="27sp"/>
+            android:textSize="@dimen/login_size"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailField"
@@ -34,7 +34,7 @@
             android:hint="@string/email"
             android:textColorHint="@color/hintTextColor"
             app:boxStrokeWidth="0dp"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="@dimen/range_between_edittext">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -52,7 +52,7 @@
             android:hint="@string/password"
             android:textColorHint="@color/hintTextColor"
             app:boxStrokeWidth="0dp"
-            android:layout_marginBottom="472dp"
+            android:layout_marginBottom="@dimen/range_between_button"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -78,6 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="41dp"
+            android:textSize="@dimen/buttonTextSize"
             android:background="@drawable/bg_button_firststart"
             android:fontFamily="@font/public_sans_bold"
             android:text="@string/button_login"

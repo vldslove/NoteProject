@@ -7,34 +7,34 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class MakeMoneyActivity : Fragment() {
+class ProgressFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_makemoney, container, false)
+        return inflater.inflate(R.layout.fragment_progress, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.skip3).setOnClickListener{
+        view.findViewById<TextView>(R.id.skip6).setOnClickListener{
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, ChatAndDevelopFragment())
+                .replace(R.id.container, SignupFragment())
                 .commit()
-        }
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.fragment_makemoney)
-//        val skip2 = findViewById<TextView>(R.id.skip3)
-//        skip2.setOnClickListener() {
-//            val intent = Intent(this, ChatAndDevelopFragment::class.java)
+//        setContentView(R.layout.fragment_progress)
+//        val skip = findViewById<TextView>(R.id.skip6)
+//        skip.setOnClickListener(){
+//            val intent = Intent(this, SignupFragment::class.java)
 //            startActivity(intent)
 //        }
 ////        Handler().postDelayed({
-////            val intent = Intent(this, FourthPage::class.java)
+////            val intent = Intent(this, SignupFragment::class.java)
 ////            startActivity(intent)
+////            finish()
 ////        }, 2000)
-//    }
+    }
 }

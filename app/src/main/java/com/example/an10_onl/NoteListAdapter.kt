@@ -1,6 +1,7 @@
 package com.example.an10_onl
 
 import android.content.Context
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,10 @@ class NoteListAdapter : RecyclerView.Adapter<NoteListViewHolder>() {
 
     fun setList(list: ArrayList<NoteList>) {
         this.list = list
+        notifyDataSetChanged()
+    }
+    fun deleteList(list: ArrayList<NoteList>) {
+        list.clear()
         notifyDataSetChanged()
     }
 }

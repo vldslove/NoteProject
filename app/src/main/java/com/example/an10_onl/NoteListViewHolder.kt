@@ -8,9 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
+typealias callback = (note: NoteList)-> Unit
+class NoteListViewHolder(private val view: View, val handleDelete: callback, val showNoteInfo: callback) : RecyclerView.ViewHolder(view) {
 
-class NoteListViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     fun showNotes(note: NoteList) {
+        view.findViewById<Button>(R.id.deleteButton2).setOnClickListener {
+        }
         view.apply {
             findViewById<TextView>(R.id.title).text = note.title
             findViewById<TextView>(R.id.message).text = note.message
@@ -23,7 +26,11 @@ class NoteListViewHolder(private val view: View) : RecyclerView.ViewHolder(view)
                 context.startActivity(chosenIntent)
             }
             findViewById<Button>(R.id.deleteButton2).setOnClickListener {
-//                ItemBottomDialog().show(childFragmentManager, "")
+                handleDelete(note)
+            }
+            findViewById<LinearLayout>(R.id.notes_layout).setOnClickListener{
+                showNoteInfo(note)
+
             }
 
         }

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class ListFragment : Fragment() {
+    private lateinit var recyclerView: RecyclerView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,6 +23,7 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        recyclerView = view.findViewById(R.id.recyclerView)
         view.findViewById<TextView>(R.id.logout).setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, LoginFragment())
@@ -32,16 +34,37 @@ class ListFragment : Fragment() {
                 .replace(R.id.container, AddNoteFragment())
                 .commit()
         }
-        view.findViewById<RecyclerView>(R.id.recyclerView).apply {
-            adapter = NoteListAdapter()
+        recyclerView.run {
+            adapter = NoteListAdapter(
+                onClick = {note ->
+                    viewNote(note)
+                },
+                handleDelete = {note ->
+                    deleteNote(note)
+                }
+            )
             layoutManager = LinearLayoutManager(activity)
             (adapter as? NoteListAdapter)?.setList(NoteData.listNote)
 
         }
-        view.findViewById<Button>(R.id.deleteButton).setOnClickListener {
-            ItemDialog().show(childFragmentManager, "")
-        }
 
+    }
+    fun viewNote(note: NoteList){
+        ItemBottomDialog().getNoteFragmentInstance(note.title, note.message).show(childFragmentManager, "")
+    }
+
+    fun deleteNote(note: NoteList){
+        var toDeleteNote: NoteList? = null
+        NoteData.listNote.forEach{_note ->
+            if (_note.title == note.title){
+                toDeleteNote = _note
+            }
+        }
+        if (toDeleteNote != null){
+            NoteData.listNote.remove(toDeleteNote)
+            val adapter = recyclerView.adapter as NoteListAdapter
+            adapter.setList(NoteData.listNote)
+        }
     }
 }
 

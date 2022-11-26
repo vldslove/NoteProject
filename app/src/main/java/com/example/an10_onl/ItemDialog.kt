@@ -26,16 +26,16 @@ class ItemDialog : DialogFragment() {
 
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.apply).setOnClickListener {
-            NoteListAdapter().deleteList(NoteData.listNote)
+            NoteData.listNote.clear()
             dismiss()
         }
         view.findViewById<Button>(R.id.cancel).setOnClickListener{
             dismiss()
         }
     }
+
 
 }

@@ -1,31 +1,31 @@
-package com.example.an10_onl
+package com.example.an10_onl.UI.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentManager
+import com.example.an10_onl.databinding.ShowNoteBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ItemBottomDialog : BottomSheetDialogFragment() {
     private val TITLE_EXTRA = "title"
     private val MESSAGE_EXTRA = "message"
+    private lateinit var binding: ShowNoteBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.show_note, container, false)
+    ): View {
+        binding = ShowNoteBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<TextView>(R.id.title_show).text = arguments?.getString(TITLE_EXTRA)
-        view.findViewById<TextView>(R.id.message_show).text = arguments?.getString(MESSAGE_EXTRA)
+        binding.titleShow.text = arguments?.getString(TITLE_EXTRA)
+        binding.messageShow.text = arguments?.getString(MESSAGE_EXTRA)
 
     }
 

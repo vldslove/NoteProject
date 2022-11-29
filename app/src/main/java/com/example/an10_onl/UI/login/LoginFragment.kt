@@ -1,38 +1,43 @@
-package com.example.an10_onl
+package com.example.an10_onl.UI.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.an10_onl.utils.validation.EmailValidator
+import com.example.an10_onl.utils.validation.Invalid
+import com.example.an10_onl.R
+import com.example.an10_onl.UI.signup.SignupFragment
+import com.example.an10_onl.UI.listNote.ListFragment
+import com.example.an10_onl.databinding.FragmentLoginBinding
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 class LoginFragment : Fragment() {
 
     private var passwordInputLayout: TextInputLayout? = null
     private var emailInputLayout: TextInputLayout? = null
+    private lateinit var binding: FragmentLoginBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+    ): View {
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         passwordInputLayout = view.findViewById(R.id.passwordField)
         emailInputLayout = view.findViewById(R.id.emailField)
-        view.findViewById<TextView>(R.id.to_signup).setOnClickListener{
+        binding.toSignup.setOnClickListener{
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, SignupFragment())
                 .commit()
         }
 
-        view.findViewById<Button>(R.id.login_button).setOnClickListener{
+        binding.loginButton.setOnClickListener{
             if (validate()) {
                 parentFragmentManager.beginTransaction()
                     .add(R.id.container, ListFragment())
@@ -50,7 +55,7 @@ class LoginFragment : Fragment() {
 
     private fun validatePassword(): String? {
         passwordInputLayout?.editText?.let {
-            val result = validatePassword(it.text.toString())
+            val result = com.example.an10_onl.utils.validation.validatePassword(it.text.toString())
             return when (result) {
                 is Invalid -> {
                     passwordInputLayout?.error = this.getString(result.errorText)

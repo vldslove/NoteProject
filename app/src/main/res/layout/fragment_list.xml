@@ -57,12 +57,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp" />
 
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@drawable/ic_delete"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center|top"/>
 
 </FrameLayout>

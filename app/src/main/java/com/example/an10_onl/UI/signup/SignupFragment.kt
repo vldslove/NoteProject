@@ -1,14 +1,16 @@
-package com.example.an10_onl
+package com.example.an10_onl.UI.signup
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.an10_onl.utils.validation.EmailValidator
+import com.example.an10_onl.utils.validation.Invalid
+import com.example.an10_onl.R
+import com.example.an10_onl.UI.listNote.ListFragment
+import com.example.an10_onl.UI.login.LoginFragment
+import com.example.an10_onl.databinding.FragmentSignupBinding
 import com.google.android.material.textfield.TextInputLayout
 
 class SignupFragment : Fragment() {
@@ -16,27 +18,29 @@ class SignupFragment : Fragment() {
     private var passwordInputLayout: TextInputLayout? = null
     private var firstNameInputLayout: TextInputLayout? = null
     private var lastNameInputLayout: TextInputLayout? = null
+    private lateinit var binding: FragmentSignupBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_signup, container, false)
+    ): View {
+        binding = FragmentSignupBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        emailInputLayout = view.findViewById(R.id.emailSignup)
-        passwordInputLayout = view.findViewById(R.id.passwordSignup)
-        firstNameInputLayout = view.findViewById(R.id.firstNameSignup)
-        lastNameInputLayout = view.findViewById(R.id.lastNameSignup)
+        emailInputLayout = binding.emailSignup
+        passwordInputLayout = binding.passwordSignup
+        firstNameInputLayout = binding.firstNameSignup
+        lastNameInputLayout = binding.lastNameSignup
 
-        view.findViewById<TextView>(R.id.loginFromSignup).setOnClickListener{
+        binding.loginFromSignup.setOnClickListener{
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, LoginFragment())
                 .commit()
         }
-        view.findViewById<Button>(R.id.signupButton).setOnClickListener{
+        binding.signupButton.setOnClickListener{
             if (validate()) {
                 parentFragmentManager.beginTransaction()
                     .replace(R.id.container, ListFragment())
@@ -72,7 +76,7 @@ class SignupFragment : Fragment() {
 
     private fun validatePassword(): String? {
         passwordInputLayout?.editText?.let {
-            val result = validatePassword(it.text.toString())
+            val result = com.example.an10_onl.utils.validation.validatePassword(it.text.toString())
             return when (result) {
                 is Invalid -> {
                     passwordInputLayout?.error = this.getString(result.errorText)
@@ -88,7 +92,7 @@ class SignupFragment : Fragment() {
 
     private fun validateFirstName(): String? {
         firstNameInputLayout?.editText?.let {
-            val result = validateFirstName(it.text.toString())
+            val result = com.example.an10_onl.utils.validation.validateFirstName(it.text.toString())
             return when (result) {
                 is Invalid -> {
                     firstNameInputLayout?.error = this.getString(result.errorText)
@@ -104,7 +108,7 @@ class SignupFragment : Fragment() {
 
     private fun validateLastName(): String? {
         lastNameInputLayout?.editText?.let {
-            val result = validateLastName(it.text.toString())
+            val result = com.example.an10_onl.utils.validation.validateLastName(it.text.toString())
             return when (result) {
                 is Invalid -> {
                     lastNameInputLayout?.error = this.getString(result.errorText)

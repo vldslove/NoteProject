@@ -1,4 +1,4 @@
-package com.example.an10_onl
+package com.example.an10_onl.model
 
 import java.util.*
 

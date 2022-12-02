@@ -12,7 +12,7 @@
         android:theme="@style/Theme.AN10onl">
 
         <activity
-            android:name=".UI.main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AN10onl.NoActionBar">
             <intent-filter>

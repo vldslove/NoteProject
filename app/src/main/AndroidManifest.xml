@@ -12,7 +12,7 @@
         android:theme="@style/Theme.AN10onl">
 
         <activity
-            android:name=".FirstStartActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AN10onl.NoActionBar">
             <intent-filter>
@@ -21,52 +21,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".WorldProjectsActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".MakeMoneyActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".ChatAndDevelopActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".LevelUpActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".ProgressActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false">
-
-        </activity>
-
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".AddNoteActivity"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".ListActivity"
-            android:exported="false">
-
-        </activity>
 
     </application>
 

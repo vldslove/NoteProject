@@ -7,34 +7,35 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class MakeMoneyActivity : Fragment() {
+class LevelUpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_makemoney, container, false)
+        return inflater.inflate(R.layout.fragment_levelup, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.skip3).setOnClickListener{
+        view.findViewById<TextView>(R.id.skip5).setOnClickListener{
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, ChatAndDevelopFragment())
+                .replace(R.id.container, ProgressFragment())
                 .commit()
         }
     }
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.fragment_makemoney)
-//        val skip2 = findViewById<TextView>(R.id.skip3)
+//        setContentView(R.layout.fragment_levelup)
+//        val skip2 = findViewById<TextView>(R.id.skip5)
 //        skip2.setOnClickListener() {
-//            val intent = Intent(this, ChatAndDevelopFragment::class.java)
+//            val intent = Intent(this, ProgressFragment::class.java)
 //            startActivity(intent)
 //        }
 ////        Handler().postDelayed({
-////            val intent = Intent(this, FourthPage::class.java)
+////            val intent = Intent(this, SixthPage::class.java)
 ////            startActivity(intent)
+////            finish()
 ////        }, 2000)
 //    }
 }

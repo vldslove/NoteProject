@@ -46,4 +46,12 @@
     <string name="addnote_buttontext">Add</string>
     <string name="logout_list">Logout</string>
     <string name="add_new">Add new</string>
+    <string name="all_notes">All notes</string>
+    <string name="search">Search</string>
+    <string name="filters">Filters</string>
+    <string name="profile">Profile</string>
+    <string name="delete_profile">Delete profile</string>
+    <string name="delete_all_notes">Delete all notes</string>
+    <string name="notes">Notes</string>
+    <string name="add">Add note</string>
 </resources>

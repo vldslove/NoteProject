@@ -37,6 +37,7 @@
             android:layout_marginBottom="@dimen/range_between_edittext">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailFieldText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textfields"
@@ -56,6 +57,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordFieldText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textfields"

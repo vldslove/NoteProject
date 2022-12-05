@@ -14,6 +14,7 @@
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_signup.xml" value="0.365625" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_sixthpage.xml" value="0.27807971014492755" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/activity_thirdpage.xml" value="0.365625" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout-v28/fragment_progress.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_addnote.xml" value="0.3" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_fifthpage.xml" value="0.30012825994014536" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/activity_fourthpage.xml" value="0.30012825994014536" />
@@ -28,7 +29,7 @@
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/dialog_item.xml" value="0.26331967213114754" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/fragment_addnote.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/fragment_first.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/fragment_list.xml" value="0.12777777777777777" />
+        <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/fragment_list.xml" value="0.25" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/fragment_second.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/item_notes.xml" value="0.3" />
         <entry key="..\:/Users/book/AndroidStudioProjects/AN10onl/app/src/main/res/layout/show_note.xml" value="0.3" />

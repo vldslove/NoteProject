@@ -1,31 +1,33 @@
-package com.example.an10_onl
+package com.example.an10_onl.UI.appInfo
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.an10_onl.R
+import com.example.an10_onl.UI.login.LoginFragment
+import com.example.an10_onl.databinding.FragmentFirststartBinding
 
 class FirstStartFragment : Fragment() {
-
+    private lateinit var binding: FragmentFirststartBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_firststart, container, false)
+    ): View {
+        binding = FragmentFirststartBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.discover_the_platform).setOnClickListener{
+        binding.discoverThePlatform.setOnClickListener{
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, WorldProjectsFragment())
                 .commit()
         }
-        view.findViewById<TextView>(R.id.login).setOnClickListener{
+        binding.login.setOnClickListener{
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, LoginFragment())
                 .commit()

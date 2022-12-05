@@ -1,4 +1,4 @@
-package com.example.an10_onl
+package com.example.an10_onl.utils.validation
 
 sealed class ValidationResult
 object Valid: ValidationResult()

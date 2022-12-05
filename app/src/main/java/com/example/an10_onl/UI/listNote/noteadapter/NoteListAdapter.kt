@@ -1,25 +1,19 @@
-package com.example.an10_onl
+package com.example.an10_onl.UI.listNote.noteadapter
 
-import android.content.Context
-import android.os.Bundle
-import android.provider.ContactsContract
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.BaseAdapter
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
+import com.example.an10_onl.model.NoteList
+import com.example.an10_onl.R
 
 class NoteListAdapter(
-    private val onClick: callback, val handleDelete: callback
+    private val onClick: callback, val handleDelete: callback, val shareNote: callback
 ) : RecyclerView.Adapter<NoteListViewHolder>() {
 
     private var list = arrayListOf<NoteList>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteListViewHolder {
         return NoteListViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_notes, parent, false), handleDelete, showNoteInfo = onClick
+            LayoutInflater.from(parent.context).inflate(R.layout.item_notes, parent, false), handleDelete, showNoteInfo = onClick, shareNote
         )
     }
 

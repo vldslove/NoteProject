@@ -15,8 +15,8 @@ class ListViewModel : ViewModel() {
         listNote.value = repository.getListNotes()
     }
 
-    fun deleteNote(title: String, message: String, date: String){
-        repository.deleteNote(Note(title,message,date))
+    fun deleteNote(id: Int, title: String, message: String, date: String){
+        repository.deleteNote(Note(id,title,message,date))
     }
 
 

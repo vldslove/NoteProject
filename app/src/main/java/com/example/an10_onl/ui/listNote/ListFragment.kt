@@ -37,7 +37,7 @@ class ListFragment : Fragment() {
                         .show(childFragmentManager, "")
                 },
                 handleDelete = {
-                    viewModel.deleteNote(it.title,it.message,it.date)
+                    viewModel.deleteNote(it.id,it.title,it.message,it.date)
                     adapter?.notifyDataSetChanged()
                 },
                 shareNote = {

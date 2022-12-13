@@ -5,12 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.an10_onl.utils.validation.EmailValidator
 import com.example.an10_onl.utils.validation.Invalid
 import com.example.an10_onl.R
 import com.example.an10_onl.ui.listNote.ListFragment
 import com.example.an10_onl.ui.login.LoginFragment
 import com.example.an10_onl.databinding.FragmentSignupBinding
+import com.example.an10_onl.db.NoteData
+import com.example.an10_onl.model.User
+import com.example.an10_onl.navigation.BottomNavigationFragment
+import com.example.an10_onl.repositories.SharedPreferencesRepository
 import com.google.android.material.textfield.TextInputLayout
 
 class SignupFragment : Fragment() {
@@ -19,6 +24,7 @@ class SignupFragment : Fragment() {
     private var firstNameInputLayout: TextInputLayout? = null
     private var lastNameInputLayout: TextInputLayout? = null
     private lateinit var binding: FragmentSignupBinding
+    private val viewModel: SignupViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,6 +36,7 @@ class SignupFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val sharedPreferencesRepository = SharedPreferencesRepository(requireContext())
         emailInputLayout = binding.emailSignup
         passwordInputLayout = binding.passwordSignup
         firstNameInputLayout = binding.firstNameSignup
@@ -42,8 +49,23 @@ class SignupFragment : Fragment() {
         }
         binding.signupButton.setOnClickListener{
             if (validate()) {
+                viewModel.addUser(
+                    binding.emailField.text.toString(),
+                    binding.passwordField.text.toString(),
+                    binding.firstNameField.text.toString(),
+                    binding.lastNameField.text.toString()
+                )
+                sharedPreferencesRepository.setUserName(
+                    binding.emailField.text.toString()
+                )
+                sharedPreferencesRepository.setUserPassword(
+                    binding.passwordField.text.toString()
+                )
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.container, ListFragment())
+                    .add(R.id.container, ListFragment())
+                    .commit()
+                parentFragmentManager.beginTransaction()
+                    .add(R.id.navigation_bar, BottomNavigationFragment())
                     .commit()
             }
         }

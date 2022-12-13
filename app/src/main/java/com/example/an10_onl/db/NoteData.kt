@@ -1,8 +1,18 @@
 package com.example.an10_onl.db
 
-import com.example.an10_onl.model.Note
+import android.content.Context
+import androidx.room.Room
+
+
 
 object NoteData {
 
-    val listNote = arrayListOf<Note>()
+    lateinit var db: AppDataBase
+
+    fun initDB(context: Context) {
+        db = Room.databaseBuilder(
+            context,
+            AppDataBase::class.java, "database-name"
+        ).allowMainThreadQueries().build()
+    }
 }

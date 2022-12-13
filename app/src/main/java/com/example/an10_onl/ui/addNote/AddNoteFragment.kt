@@ -37,7 +37,7 @@ class AddNoteFragment : Fragment() {
         val date = LocalDate.now()
         binding.addNote.setOnClickListener {
             if (validate()) {
-                viewModel.addNote(
+                viewModel.addNote(0,
                         binding.titleField.text.toString(),
                         binding.messageField.text.toString(),
                         date.toString()

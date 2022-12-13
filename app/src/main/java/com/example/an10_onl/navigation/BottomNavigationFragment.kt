@@ -5,12 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.example.an10_onl.R
 import com.example.an10_onl.ui.addNote.AddNoteFragment
 import com.example.an10_onl.ui.listNote.ListFragment
 import com.example.an10_onl.ui.profile.ProfileFragment
 import com.example.an10_onl.ui.search.SearchFragment
 import com.example.an10_onl.databinding.FragmentBottomnavigationBinding
+import okhttp3.internal.wait
 
 class BottomNavigationFragment : Fragment() {
     private lateinit var binding: FragmentBottomnavigationBinding

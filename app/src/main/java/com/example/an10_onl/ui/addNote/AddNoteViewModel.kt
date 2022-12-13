@@ -8,7 +8,7 @@ class AddNoteViewModel : ViewModel(){
     private val repository = NoteRepository()
 
 
-    fun addNote(title: String, message: String, date: String){
-        repository.addNote(Note(title,message,date))
+    fun addNote(id: Int, title: String, message: String, date: String){
+        repository.addNote(Note(id,title,message,date))
     }
 }

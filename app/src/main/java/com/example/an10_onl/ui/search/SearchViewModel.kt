@@ -2,8 +2,10 @@ package com.example.an10_onl.ui.search
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.an10_onl.model.Note
 import com.example.an10_onl.repositories.NoteRepository
+import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel() {
 
@@ -14,12 +16,16 @@ class SearchViewModel : ViewModel() {
     val searchResult = MutableLiveData<ArrayList<Note>>()
 
     fun getList(){
-        listNote.value = repository.getListNotes()
+        viewModelScope.launch {
+            listNote.value = repository.getListNotes()
+        }
     }
 
     fun searchNote(searchText: String) {
-        searchResult.value = repository.getListNotes().filter {
-            it.title.contains(searchText) || it.message.contains(searchText)
-        } as ArrayList<Note>
+       viewModelScope.launch {
+           searchResult.value = repository.getListNotes().filter {
+               it.title.contains(searchText) || it.message.contains(searchText)
+           } as ArrayList<Note>
+       }
     }
 }

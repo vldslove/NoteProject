@@ -11,12 +11,12 @@ import com.example.an10_onl.model.Note
 interface NoteDao {
 
     @Insert
-    fun addNote(note: Note)
+    suspend fun addNote(note: Note)
 
     @Delete
-    fun deleteNote(note: Note)
+    suspend fun deleteNote(note: Note)
 
     @Query("SELECT * FROM Note")
-    fun selectAllNote(): List<Note>
+    suspend fun selectAllNote(): List<Note>
 
 }

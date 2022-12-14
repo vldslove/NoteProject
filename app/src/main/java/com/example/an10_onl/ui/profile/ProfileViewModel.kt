@@ -20,7 +20,7 @@ class ProfileViewModel : ViewModel() {
         const val none = "0 note"
     }
 
-    fun getSize(): Int {
+    suspend fun getSize(): Int {
         return repository.getListSize()
     }
 
@@ -28,9 +28,16 @@ class ProfileViewModel : ViewModel() {
         repository.deleteList()
     }
 
+    fun userDelete(user: User) {
+        viewModelScope.launch {
+            userRepository.deleteUser(user)
+        }
+    }
 
-    fun getUsers(){
-        listUsers.value = userRepository.getAllUsers()
+    fun getUsers() {
+        viewModelScope.launch {
+            listUsers.postValue(userRepository.getAllUsers())
+        }
     }
 
 

@@ -9,15 +9,15 @@ import okhttp3.internal.notifyAll
 class NoteRepository {
 
 
-    fun getListNotes(): ArrayList<Note> {
+    suspend fun getListNotes(): ArrayList<Note> {
         return NoteData.db.noteDao().selectAllNote() as ArrayList<Note>
     }
 
-    fun addNote(note: Note) {
+    suspend fun addNote(note: Note) {
         NoteData.db.noteDao().addNote(note)
     }
 
-    fun deleteNote(note: Note) {
+    suspend fun deleteNote(note: Note) {
         NoteData.db.noteDao().deleteNote(note)
     }
 
@@ -25,7 +25,7 @@ class NoteRepository {
         NoteData.db.clearAllTables()
     }
 
-    fun getListSize(): Int {
+    suspend fun getListSize(): Int {
         return NoteData.db.noteDao().selectAllNote().size
     }
 

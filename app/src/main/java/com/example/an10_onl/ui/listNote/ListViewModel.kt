@@ -2,8 +2,10 @@ package com.example.an10_onl.ui.listNote
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.an10_onl.model.Note
 import com.example.an10_onl.repositories.NoteRepository
+import kotlinx.coroutines.launch
 
 class ListViewModel : ViewModel() {
 
@@ -12,13 +14,15 @@ class ListViewModel : ViewModel() {
     val listNote = MutableLiveData<ArrayList<Note>>()
 
     fun getList() {
-        listNote.value = repository.getListNotes()
+        viewModelScope.launch {
+            listNote.value = repository.getListNotes()
+        }
     }
 
-    fun deleteNote(title: String, message: String, date: String){
-        repository.deleteNote(Note(title,message,date))
+    fun deleteNote(id: Int, title: String, message: String, date: String){
+        viewModelScope.launch {
+            repository.deleteNote(Note(id, title, message, date))
+        }
     }
-
-
 
 }

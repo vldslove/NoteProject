@@ -46,27 +46,18 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_filter"
-            android:layout_marginTop="35dp"
-            android:layout_marginStart="26dp"/>
         <TextView
             android:id="@+id/filters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/filters"
             android:layout_marginTop="31dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="25dp"
+            android:drawablePadding="5sp"
             android:textColor="@color/hintTextColor"
-            android:textSize="@dimen/sp_16"/>
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/ic_filter" />
 
-        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSearch"
